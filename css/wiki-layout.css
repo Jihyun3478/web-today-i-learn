@@ -132,6 +132,15 @@ main {
   background-color: var(--card-bg-color);
 }
 
+.work-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--card-bg-color);
+  border-radius: 12px;
+  padding: 20px;
+}
+
 .work-thumbnail {
   width: 140px;
   height: 180px;
@@ -350,16 +359,6 @@ footer {
   color: #666;
 }
 
-/* 영상 삽입 */
-.work-card iframe,
-.work-card video {
-  width: 100%;
-  max-width: 480px;
-  aspect-ratio: 16 / 9;
-  border: none;
-  border-radius: 4px;
-}
-
 /* 변수 */
 :root {
   --primary-color: #3a6ea8;
@@ -547,9 +546,11 @@ footer {
   flex-shrink: 0;
 }
 
-.work-video-small {
-  width: 140px;
+.work-video-full {
+  width: 100%;
   aspect-ratio: 16 / 9;
   border: none;
-  border-radius: 4px;
+  border-radius: 12px;
+  margin-top: -16px;
+  display: block;
 }
