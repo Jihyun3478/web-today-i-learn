@@ -40,7 +40,7 @@ const tracks = [
         artist: 'Bruno Mars',
         img: 'images/playlist/playlist-3.jpeg',
         dur: '3:33',
-        url: 'https://youtu.be/ekzHIouo8Q4?si=Hb-KhcD17CIRp_Kj'
+        url: 'https://youtu.be/b3KUDuVJfn8'
     },
     {
         title: 'Hey Jude',
