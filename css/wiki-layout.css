@@ -540,9 +540,16 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: #2d5a8e;
 }
-.work-video {
-  width: 100%;
+.work-thumbnail-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.work-video-small {
+  width: 140px;
   aspect-ratio: 16 / 9;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
 }
