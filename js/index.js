@@ -50,11 +50,18 @@ const tracks = [
         url: 'https://youtu.be/A_MjCqQoLLA?si=19mowkSagjnrW9Qn'
     },
     {
-        title: 'In My Life',
-        artist: 'The beatles',
+        title: 'Piano Man',
+        artist: 'Billy Joel',
         img: 'images/playlist/playlist-5.jpeg',
-        dur: '2:27',
-        url: 'https://youtu.be/YBcdt6DsLQA?si=bSEkBxxyJKRJRQHr'
+        dur: '5:41',
+        url: 'https://youtu.be/gxEPV4kolz0'
+    },
+    {
+        title: 'Honesty',
+        artist: 'Billy Joel',
+        img: 'images/playlist/playlist-6.jpeg',
+        dur: '3:46',
+        url: 'https://youtu.be/SuFScoO4tb0'
     },
 ];
 let cur = 0, isPlaying = true;
