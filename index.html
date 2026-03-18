@@ -30,11 +30,11 @@
       <div class="profile-card">
         <div class="profile-image">
           <!-- TODO: 프로필 이미지를 넣어주세요 -->
-          <!-- <img src="./images/profile.jpg" alt="프로필 사진" /> -->
+           <img src="./images/profile/profile.jpeg" alt="프로필 사진" />
         </div>
         <div class="profile-info">
-          <h1>닉네임</h1>
-          <p class="tagline">한 줄 소개를 작성해주세요.</p>
+          <h1>로지</h1>
+          <p class="tagline">안녕하세요! 도전과 여행을 좋아하는 백엔드 크루 로지입니다:)</p>
         </div>
       </div>
     </section>
@@ -43,8 +43,13 @@
       <!-- 자기소개 -->
       <section class="content-section">
         <h2>자기소개</h2>
-        <p>자기소개를 작성해주세요.</p>
         <!-- TODO: 소개 글 안에 블로그, GitHub 등 관련 링크를 <a> 태그로 연결하세요 -->
+        <p>
+          우테코에서 '스스로 깊이 있는 생각을 통해 결론 도출하기'를 얻어가고 싶은 백엔드 크루 로지입니다.<br>
+          크루들과 함께 열심히 성장해서 수료 후에는 CS 마스터가 되어있으면 좋겠어요!!
+        </p>
+        <a href="https://github.com/Jihyun3478" class="link-btn" target="_blank">Github</a>
+        <a href="https://jihyun-devstory.tistory.com/" class="link-btn" target="_blank">Blog</a>
       </section>
 
       <!-- 기본 정보 -->
@@ -54,34 +59,71 @@
         <table class="info-table">
           <tr>
             <th>이름</th>
-            <td></td>
+            <td>이지현</td>
           </tr>
           <tr>
             <th>MBTI</th>
-            <td></td>
+            <td>INTJ</td>
           </tr>
           <tr>
             <th>취미</th>
-            <td></td>
+            <td>드라마 보기, 영화 보기, 음악 듣기, 요리하기</td>
           </tr>
           <tr>
             <th>좋아하는 음식</th>
-            <td></td>
+            <td>빵, 케이크, 해산물(회, 새우), 고기, 등갈비 김치찌개, 닭볶음탕, 오징어 뭇국</td>
           </tr>
         </table>
+      </section>
+
+      <!-- 오늘의 플레이 리스트 -->
+      <section class="content-section" id="playlist">
+        <h2>오늘의 플레이 리스트</h2>
+
+        <div class="mp-wrap">
+          <div class="mp-left">
+            <div class="cd-wrap">
+              <div class="cd spinning" id="cdDisc"></div>
+              <div class="cd-hole"></div>
+              <div class="cd-label" id="cdLabel">MY<br>MUSIC</div>
+            </div>
+            <div class="mp-song-info">
+              <div class="mp-song-title" id="mpTitle">바람이 전하는 편지</div>
+              <div class="mp-song-artist" id="mpArtist">Artist Name</div>
+            </div>
+            <div class="mp-progress">
+              <div class="mp-prog-bar"><div class="mp-prog-fill" id="mpFill"></div></div>
+              <div class="mp-times"><span>1:18</span><span id="mpDur">3:42</span></div>
+            </div>
+            <div class="mp-controls">
+              <button class="mp-btn" onclick="prev()">&#9664;&#9664;</button>
+              <button class="mp-play" id="mpPlay" onclick="togglePlay()">&#9654;</button>
+              <button class="mp-btn" onclick="next()">&#9654;&#9654;</button>
+            </div>
+          </div>
+
+          <div class="mp-right">
+            <div class="mp-list-header">Playlist</div>
+            <div id="mpList"></div>
+          </div>
+        </div>
       </section>
 
       <!-- 나만의 갤러리 -->
       <section class="content-section" id="gallery">
         <h2>나만의 갤러리</h2>
-        <p class="section-desc">갤러리 부제를 작성해주세요. (예: 기억에 남는 여행지)</p>
+        <p class="section-desc">여행 중 가장 좋았던 순간 (순서대로 스위스, 터키, 훗카이도)</p>
         <div class="gallery-grid">
           <!-- TODO: 9장의 이미지를 배치하세요 -->
-          <!--
-          <img src="./images/gallery-1.jpg" alt="갤러리 이미지 1" />
-          <img src="./images/gallery-2.jpg" alt="갤러리 이미지 2" />
-          ...
-          -->
+          <img src="images/gallery/gallery-1.jpeg" alt="갤러리 이미지 1" />
+          <img src="images/gallery/gallery-2.gif" alt="갤러리 이미지 2" />
+          <img src="images/gallery/gallery-3.gif" alt="갤러리 이미지 3" />
+          <img src="images/gallery/gallery-4.gif" alt="갤러리 이미지 4" />
+          <img src="images/gallery/gallery-5.gif" alt="갤러리 이미지 5" />
+          <img src="images/gallery/gallery-6.jpeg" alt="갤러리 이미지 6" />
+          <img src="images/gallery/gallery-7.gif" alt="갤러리 이미지 7" />
+          <img src="images/gallery/gallery-9.jpeg" alt="갤러리 이미지 8" />
+          <img src="images/gallery/gallery-8.gif" alt="갤러리 이미지 9" />
         </div>
       </section>
 
@@ -94,12 +136,33 @@
           <article class="work-card">
             <div class="work-thumbnail">
               <!-- 작품 이미지 -->
+              <img src="images/work/work-1.webp"/>
             </div>
             <div class="work-info">
-              <h3>작품 제목</h3>
-              <p>작품에 대한 설명을 작성해주세요.</p>
+              <h3>응답하라 1988</h3>
+              <p>쌍팔년도 쌍문동, 한 골목 다섯 가족의 왁자지껄 코믹 가족극</p>
             </div>
           </article>
+          <iframe class="work-video" src="https://www.youtube.com/embed/VBpv6Tf4om0" allowfullscreen></iframe>
+
+          <article class="work-card">
+            <div class="work-thumbnail">
+              <!-- 작품 이미지 -->
+              <img src="images/work/work-2.webp"/>
+            </div>
+            <div class="work-info">
+              <h3>어바웃타임</h3>
+              <p>모태솔로 팀(돔놀 글리슨)은 성인이 된 날, 아버지(빌 나이)로부터 놀랄만한 가문의 비밀을 듣게 된다.
+                바로 시간을 되돌릴 수 있는 능력이 있다는 것!<br><br>
+                그것이 비록 히틀러를 죽이거나 여신과 뜨거운 사랑을 할 수는 없지만, 여자친구는 만들어 줄 순 있으리..
+                꿈을 위해 런던으로 간 팀은 우연히 만난 사랑스러운 여인 메리에게 첫눈에 반하게 된다.
+                그녀의 사랑을 얻기 위해 자신의 특별한 능력을 마음껏 발휘하는 팀. 어설픈 대시, 어색한 웃음은 리와인드!
+                꿈에 그리던 그녀와 매일매일 최고의 순간을 보낸다.<br><br>
+                하지만 그와 그녀의 사랑이 완벽해질수록 팀을 둘러싼 주변 상황들은 미묘하게 엇갈리고, 예상치 못한 사건들이 여기저기 나타나기 시작하는데…
+                어떠한 순간을 다시 살게 된다면, 과연 완벽한 사랑을 이룰 수 있을까?</p>
+            </div>
+          </article>
+          <iframe class="work-video" src="https://www.youtube.com/embed/dO56h_hX_0M" allowfullscreen></iframe>
         </div>
       </section>
 

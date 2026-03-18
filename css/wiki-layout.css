@@ -362,10 +362,187 @@ footer {
 
 /* 변수 */
 :root {
-  --primary-color: #4a7c59;
+  --primary-color: #3a6ea8;
   --nav-bg-color: #fff;
-  --hero-bg-color: #f8faf8;
+  --hero-bg-color: #f0f4fb;
   --card-bg-color: #fafafa;
   --divider-color: #e8e8e8;
   --font-default-color: #333;
+}
+
+/* 플레이리스트 */
+.mp-wrap {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 24px 28px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  box-sizing: border-box;
+}
+.mp-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.cd-wrap {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cd {
+  width: 130px; height: 130px;
+  border-radius: 50%;
+  background: conic-gradient(
+          #c8d8e8 0deg, #3a6ea8 40deg, #d4e0f4 80deg,
+          #2d5a8e 120deg, #b8c8d8 160deg, #3a6ea8 200deg,
+          #e0e8f4 240deg, #1e4a7e 280deg, #c8d8e8 320deg, #3a6ea8 360deg
+  );
+  border: 3px solid #ddd;
+  animation: cdSpin 4s linear infinite;
+  animation-play-state: paused;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+.cd.spinning { animation-play-state: running; }
+@keyframes cdSpin { to { transform: rotate(360deg); } }
+.cd-hole {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #ccc;
+  z-index: 2;
+}
+.cd-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 700;
+  color: #3a6ea8;
+  letter-spacing: 0.05em;
+  text-align: center;
+  z-index: 4;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mp-song-info { text-align: center; }
+.mp-song-title { font-size: 13px; font-weight: 700; color: #222; }
+.mp-song-artist { font-size: 11px; color: #999; margin-top: 2px; }
+.mp-progress { width: 130px; }
+.mp-prog-bar {
+  width: 100%; height: 3px;
+  background: #eee; border-radius: 3px; overflow: hidden;
+}
+.mp-prog-fill {
+  height: 100%; background: #3a6ea8;
+  border-radius: 3px; width: 30%;
+}
+.mp-times {
+  display: flex; justify-content: space-between;
+  font-size: 10px; color: #bbb; margin-top: 4px;
+}
+.mp-controls { display: flex; align-items: center; gap: 12px; }
+.mp-btn {
+  background: none; border: none; cursor: pointer;
+  color: #aaa; font-size: 13px; padding: 0;
+}
+.mp-btn:hover { color: #3a6ea8; }
+.mp-play {
+  width: 34px; height: 34px;
+  background: #3a6ea8; border-radius: 50%;
+  color: #fff; font-size: 12px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; border: none;
+}
+.mp-play:hover { background: #2d5a8e; }
+.mp-right { flex: 1; min-width: 0; }
+.mp-list-header {
+  font-size: 10px; letter-spacing: 0.12em;
+  color: #bbb; text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.mp-track {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 8px;
+  cursor: pointer;
+}
+.mp-track:hover { background: #f5f5f5; }
+.mp-track.active { background: #f0f4fb; }
+.mp-num { font-size: 11px; color: #ccc; width: 14px; text-align: center; flex-shrink: 0; }
+.mp-track.active .mp-num { color: #3a6ea8; font-weight: 700; }
+.mp-t-thumb {
+  width: 36px; height: 36px; border-radius: 6px;
+  background: #e8f0fb; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+.mp-t-meta { flex: 1; min-width: 0; }
+.mp-t-title {
+  font-size: 12.5px; font-weight: 600; color: #222;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.mp-track.active .mp-t-title { color: #3a6ea8; }
+.mp-t-artist { font-size: 11px; color: #aaa; margin-top: 1px; }
+.mp-t-dur { font-size: 11px; color: #ccc; flex-shrink: 0; }
+/* 링크 버튼 */
+.link-btn {
+  display: inline-block;
+  margin-right: 8px;
+  margin-top: 12px;
+  padding: 7px 16px;
+  border: 1.5px solid #3a6ea8;
+  border-radius: 20px;
+  color: #3a6ea8;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.link-btn:hover {
+  background: #3a6ea8;
+  color: #fff;
+}
+/* 스크롤바 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f4fb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a6ea8;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d5a8e;
+}
+.work-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 8px;
 }
