@@ -1,219 +1,225 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
 
-    <meta property="og:title" content="로지의 My Page" />
-    <meta property="og:description" content="도전과 여행을 좋아하는 백엔드 크루 로지입니다 :)" />
-    <meta property="og:image" content="./images/profile/profile.jpeg" />
+    <meta property="og:title" content="로지의 My Page"/>
+    <meta property="og:description" content="도전과 여행을 좋아하는 백엔드 크루 로지입니다 :)"/>
+    <meta property="og:image" content="./images/profile/profile.jpeg"/>
 
     <title>Today I Learn</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.css"/>
     <script src="./js/index.js" defer></script>
-  </head>
-  <body>
-    <!-- 상단 내비게이션 -->
-    <nav class="top-nav">
-      <span class="nav-logo">My Page</span>
-      <ul class="nav-links">
+</head>
+<body>
+<!-- 상단 내비게이션 -->
+<nav class="top-nav">
+    <span class="nav-logo">My Page</span>
+    <ul class="nav-links">
         <li><a href="#about">자기소개</a></li>
         <li><a href="#gallery">갤러리</a></li>
         <li><a href="#works">인생 작품</a></li>
         <li><a href="#til">TIL</a></li>
-      </ul>
-    </nav>
+    </ul>
+</nav>
 
-    <!-- 프로필 히어로 -->
-    <section class="hero" id="about">
-      <div class="profile-card">
+<!-- 프로필 히어로 -->
+<section class="hero" id="about">
+    <div class="profile-card">
         <div class="profile-image">
-          <!-- TODO: 프로필 이미지를 넣어주세요 -->
-           <img src="./images/profile/profile.jpeg" alt="프로필 사진" />
+            <!-- TODO: 프로필 이미지를 넣어주세요 -->
+            <img src="./images/profile/profile.jpeg" alt="프로필 사진"/>
         </div>
         <div class="profile-info">
-          <h1>로지</h1>
-          <p class="tagline">안녕하세요! 도전과 여행을 좋아하는 백엔드 크루 로지입니다:)</p>
+            <h1>로지</h1>
+            <p class="tagline">안녕하세요! 도전과 여행을 좋아하는 백엔드 크루 로지입니다:)</p>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <main>
-      <!-- 자기소개 -->
-      <section class="content-section">
+<main>
+    <!-- 자기소개 -->
+    <section class="content-section">
         <h2>자기소개</h2>
         <p>
-          우테코에서 '스스로 깊이 있는 생각을 통해 결론 도출하기'를 얻어가고 싶은 백엔드 크루 로지입니다.<br>
-          크루들과 함께 열심히 성장해서 수료 후에는 CS 마스터가 되어있으면 좋겠어요!!
+            우테코에서 '스스로 깊이 있는 생각을 통해 결론 도출하기'를 얻어가고 싶은 백엔드 크루 로지입니다.<br>
+            크루들과 함께 열심히 성장해서 수료 후에는 CS 마스터가 되어있으면 좋겠어요!!
         </p>
         <a href="https://github.com/Jihyun3478" class="link-btn" target="_blank">Github</a>
         <a href="https://jihyun-devstory.tistory.com/" class="link-btn" target="_blank">Blog</a>
-      </section>
+    </section>
 
-      <!-- 기본 정보 -->
-      <section class="content-section" id="info">
+    <!-- 기본 정보 -->
+    <section class="content-section" id="info">
         <h2>기본 정보</h2>
         <table class="info-table">
-          <tr>
-            <th>이름</th>
-            <td>이지현</td>
-          </tr>
-          <tr>
-            <th>MBTI</th>
-            <td>INTJ</td>
-          </tr>
-          <tr>
-            <th>취미</th>
-            <td>드라마 보기, 영화 보기, 음악 듣기, 요리하기</td>
-          </tr>
-          <tr>
-            <th>좋아하는 음식</th>
-            <td>빵, 케이크, 해산물(회, 새우), 고기, 등갈비 김치찌개, 닭볶음탕, 오징어 뭇국</td>
-          </tr>
+            <tr>
+                <th>이름</th>
+                <td>이지현</td>
+            </tr>
+            <tr>
+                <th>MBTI</th>
+                <td>INTJ</td>
+            </tr>
+            <tr>
+                <th>취미</th>
+                <td>드라마 보기, 영화 보기, 음악 듣기, 요리하기</td>
+            </tr>
+            <tr>
+                <th>좋아하는 음식</th>
+                <td>빵, 케이크, 해산물(회, 새우), 고기, 등갈비 김치찌개, 닭볶음탕, 오징어 뭇국</td>
+            </tr>
         </table>
-      </section>
+    </section>
 
-      <!-- 오늘의 플레이 리스트 -->
-      <section class="content-section" id="playlist">
+    <!-- 오늘의 플레이 리스트 -->
+    <section class="content-section" id="playlist">
         <h2>오늘의 플레이 리스트</h2>
 
         <div class="mp-wrap">
-          <div class="mp-left">
-            <div class="cd-wrap">
-              <div class="cd spinning" id="cdDisc"></div>
-              <div class="cd-hole"></div>
-              <div class="cd-label" id="cdLabel">MY<br>MUSIC</div>
+            <div class="mp-left">
+                <div class="cd-wrap">
+                    <div class="cd spinning" id="cdDisc"></div>
+                    <div class="cd-hole"></div>
+                    <div class="cd-label" id="cdLabel">MY<br>MUSIC</div>
+                </div>
+                <div class="mp-song-info">
+                    <div class="mp-song-title" id="mpTitle">바람이 전하는 편지</div>
+                    <div class="mp-song-artist" id="mpArtist">Artist Name</div>
+                </div>
+                <div class="mp-progress">
+                    <div class="mp-prog-bar">
+                        <div class="mp-prog-fill" id="mpFill"></div>
+                    </div>
+                    <div class="mp-times"><span>1:18</span><span id="mpDur">3:42</span></div>
+                </div>
+                <div class="mp-controls">
+                    <button class="mp-btn" onclick="prev()">&#9664;&#9664;</button>
+                    <button class="mp-play" id="mpPlay" onclick="togglePlay()">&#9654;</button>
+                    <button class="mp-btn" onclick="next()">&#9654;&#9654;</button>
+                </div>
             </div>
-            <div class="mp-song-info">
-              <div class="mp-song-title" id="mpTitle">바람이 전하는 편지</div>
-              <div class="mp-song-artist" id="mpArtist">Artist Name</div>
-            </div>
-            <div class="mp-progress">
-              <div class="mp-prog-bar"><div class="mp-prog-fill" id="mpFill"></div></div>
-              <div class="mp-times"><span>1:18</span><span id="mpDur">3:42</span></div>
-            </div>
-            <div class="mp-controls">
-              <button class="mp-btn" onclick="prev()">&#9664;&#9664;</button>
-              <button class="mp-play" id="mpPlay" onclick="togglePlay()">&#9654;</button>
-              <button class="mp-btn" onclick="next()">&#9654;&#9654;</button>
-            </div>
-          </div>
 
-          <div class="mp-right">
-            <div class="mp-list-header">Playlist</div>
-            <div id="mpList"></div>
-          </div>
+            <div class="mp-right">
+                <div class="mp-list-header">Playlist</div>
+                <div id="mpList"></div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- 나만의 갤러리 -->
-      <section class="content-section" id="gallery">
+    <!-- 나만의 갤러리 -->
+    <section class="content-section" id="gallery">
         <h2>나만의 갤러리</h2>
         <p class="section-desc">여행 중 가장 좋았던 순간 (순서대로 스위스, 터키, 훗카이도)</p>
         <div class="gallery-grid">
-          <img src="images/gallery/gallery-1.jpeg" alt="갤러리 이미지 1" />
-          <img src="images/gallery/gallery-2.gif" alt="갤러리 이미지 2" />
-          <img src="images/gallery/gallery-3.gif" alt="갤러리 이미지 3" />
-          <img src="images/gallery/gallery-4.gif" alt="갤러리 이미지 4" />
-          <img src="images/gallery/gallery-5.gif" alt="갤러리 이미지 5" />
-          <img src="images/gallery/gallery-6.jpeg" alt="갤러리 이미지 6" />
-          <img src="images/gallery/gallery-7.gif" alt="갤러리 이미지 7" />
-          <img src="images/gallery/gallery-9.jpeg" alt="갤러리 이미지 8" />
-          <img src="images/gallery/gallery-8.gif" alt="갤러리 이미지 9" />
+            <img src="images/gallery/gallery-1.jpeg" alt="갤러리 이미지 1"/>
+            <img src="images/gallery/gallery-2.gif" alt="갤러리 이미지 2"/>
+            <img src="images/gallery/gallery-3.gif" alt="갤러리 이미지 3"/>
+            <img src="images/gallery/gallery-4.gif" alt="갤러리 이미지 4"/>
+            <img src="images/gallery/gallery-5.gif" alt="갤러리 이미지 5"/>
+            <img src="images/gallery/gallery-6.jpeg" alt="갤러리 이미지 6"/>
+            <img src="images/gallery/gallery-7.gif" alt="갤러리 이미지 7"/>
+            <img src="images/gallery/gallery-9.jpeg" alt="갤러리 이미지 8"/>
+            <img src="images/gallery/gallery-8.gif" alt="갤러리 이미지 9"/>
         </div>
-      </section>
+    </section>
 
-      <!-- 나를 울린 인생 작품 -->
-      <section class="content-section" id="works">
+    <!-- 나를 울린 인생 작품 -->
+    <section class="content-section" id="works">
         <h2>나를 울린 인생 작품</h2>
         <div class="works-list">
-          <div class="work-group">
-            <article class="work-card">
-              <div class="work-thumbnail">
-                <img src="images/work/work-1.jpeg"/>
-              </div>
-              <div class="work-info">
-                <h3>폭싹 속았수다</h3>
-                <p>
-                  제주에서 태어난 '요망진 반항아' 애순이와 '팔불출 무쇠' 관식이의 모험 가득한 일생을 사계절로 풀어낸 넷플릭스 시리즈<br><br><br>
-                  가장 인상 깊었던 대사 - 내가 외줄을 탈 때마다 아빠는 그물을 펼치고 서 있었다. 아빠가 그렇게 서 있는 동안 아빠에게만 눈이 내렸나보다.
-                </p>
-              </div>
-            </article>
-            <iframe class="work-video-full"
-                    src="https://www.youtube.com/embed/biq3XcHgXqQ"
-                    allowfullscreen>
-            </iframe>
-          </div>
+            <div class="work-group">
+                <article class="work-card">
+                    <div class="work-thumbnail">
+                        <img src="images/work/work-1.jpeg"/>
+                    </div>
+                    <div class="work-info">
+                        <ul>
+                            <h3>폭싹 속았수다</h3>
+                            <p>
+                                제주에서 태어난 '요망진 반항아' 애순이와 '팔불출 무쇠' 관식이의 모험 가득한 일생을 사계절로 풀어낸 넷플릭스 시리즈<br><br><br>
+                                가장 인상 깊었던 대사 - 내가 외줄을 탈 때마다 아빠는 그물을 펼치고 서 있었다. 아빠가 그렇게 서 있는 동안 아빠에게만 눈이 내렸나보다.
+                            </p>
+                        </ul>
+                    </div>
+                </article>
+                <iframe class="work-video-full"
+                        src="https://www.youtube.com/embed/biq3XcHgXqQ"
+                        allowfullscreen>
+                </iframe>
+            </div>
 
-          <div class="work-group">
-            <article class="work-card">
-              <div class="work-thumbnail">
-                <img src="images/work/work-2.webp"/>
-              </div>
-              <div class="work-info">
-                <h3>어바웃타임</h3>
-                <p>모태솔로 팀(돔놀 글리슨)은 성인이 된 날, 아버지(빌 나이)로부터 놀랄만한 가문의 비밀을 듣게 된다.
-                  바로 시간을 되돌릴 수 있는 능력이 있다는 것!<br><br>
-                  그것이 비록 히틀러를 죽이거나 여신과 뜨거운 사랑을 할 수는 없지만, 여자친구는 만들어 줄 순 있으리..
-                  꿈을 위해 런던으로 간 팀은 우연히 만난 사랑스러운 여인 메리에게 첫눈에 반하게 된다.
-                  그녀의 사랑을 얻기 위해 자신의 특별한 능력을 마음껏 발휘하는 팀. 어설픈 대시, 어색한 웃음은 리와인드!
-                  꿈에 그리던 그녀와 매일매일 최고의 순간을 보낸다.<br><br>
-                  하지만 그와 그녀의 사랑이 완벽해질수록 팀을 둘러싼 주변 상황들은 미묘하게 엇갈리고, 예상치 못한 사건들이 여기저기 나타나기 시작하는데…
-                  어떠한 순간을 다시 살게 된다면, 과연 완벽한 사랑을 이룰 수 있을까?<br><br><br>
+            <div class="work-group">
+                <article class="work-card">
+                    <div class="work-thumbnail">
+                        <img src="images/work/work-2.webp"/>
+                    </div>
+                    <div class="work-info">
+                        <ul>
+                            <h3>어바웃타임</h3>
+                            <p>모태솔로 팀(돔놀 글리슨)은 성인이 된 날, 아버지(빌 나이)로부터 놀랄만한 가문의 비밀을 듣게 된다.
+                                바로 시간을 되돌릴 수 있는 능력이 있다는 것!<br><br>
+                                그것이 비록 히틀러를 죽이거나 여신과 뜨거운 사랑을 할 수는 없지만, 여자친구는 만들어 줄 순 있으리..
+                                꿈을 위해 런던으로 간 팀은 우연히 만난 사랑스러운 여인 메리에게 첫눈에 반하게 된다.
+                                그녀의 사랑을 얻기 위해 자신의 특별한 능력을 마음껏 발휘하는 팀. 어설픈 대시, 어색한 웃음은 리와인드!
+                                꿈에 그리던 그녀와 매일매일 최고의 순간을 보낸다.<br><br>
+                                하지만 그와 그녀의 사랑이 완벽해질수록 팀을 둘러싼 주변 상황들은 미묘하게 엇갈리고, 예상치 못한 사건들이 여기저기 나타나기 시작하는데…
+                                어떠한 순간을 다시 살게 된다면, 과연 완벽한 사랑을 이룰 수 있을까?<br><br><br>
 
-                  가장 인상 깊었던 대사 - 이제 난 시간 여행을 하지 않는다. 하루를 위해서라도. 그저 내가 이 날을 위해 시간 여행을 한 것처럼.
-                  나의 특별하면서도 평범한 마지막 날이라고 생각하며, 완전하고 즐겁게 매일을 지내려고 노력할 뿐이다.
-                </p>
-              </div>
-            </article>
-            <iframe class="work-video-full"
-                    src="https://www.youtube.com/embed/dO56h_hX_0M"
-                    allowfullscreen>
-            </iframe>
-          </div>
+                                가장 인상 깊었던 대사 - 이제 난 시간 여행을 하지 않는다. 하루를 위해서라도. 그저 내가 이 날을 위해 시간 여행을 한 것처럼.
+                                나의 특별하면서도 평범한 마지막 날이라고 생각하며, 완전하고 즐겁게 매일을 지내려고 노력할 뿐이다.
+                            </p>
+                        </ul>
+                    </div>
+                </article>
+                <iframe class="work-video-full"
+                        src="https://www.youtube.com/embed/dO56h_hX_0M"
+                        allowfullscreen>
+                </iframe>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- TIL (Today I Learned) -->
-      <section class="content-section" id="til">
+    <!-- TIL (Today I Learned) -->
+    <section class="content-section" id="til">
         <h2>TIL</h2>
         <p class="section-desc">오늘 새롭게 배운 것들을 기록합니다.</p>
 
         <!-- TIL 작성 폼 -->
         <form class="til-form" id="til-form">
-          <div class="form-group">
-            <label for="til-date">날짜</label>
-            <input type="date" id="til-date" name="date" required />
-          </div>
-          <div class="form-group">
-            <label for="til-title">제목</label>
-            <input type="text" id="til-title" name="title" placeholder="학습 주제를 입력하세요" required />
-          </div>
-          <div class="form-group">
-            <label for="til-content">내용</label>
-            <textarea id="til-content" name="content" placeholder="오늘 배운 내용을 정리해주세요" required></textarea>
-          </div>
-          <div class="form-actions">
-            <button type="submit">등록</button>
-            <button type="reset">초기화</button>
-          </div>
+            <div class="form-group">
+                <label for="til-date">날짜</label>
+                <input type="date" id="til-date" name="date" required/>
+            </div>
+            <div class="form-group">
+                <label for="til-title">제목</label>
+                <input type="text" id="til-title" name="title" placeholder="학습 주제를 입력하세요" required/>
+            </div>
+            <div class="form-group">
+                <label for="til-content">내용</label>
+                <textarea id="til-content" name="content" placeholder="오늘 배운 내용을 정리해주세요" required></textarea>
+            </div>
+            <div class="form-actions">
+                <button type="submit">등록</button>
+                <button type="reset">초기화</button>
+            </div>
         </form>
 
         <!-- TIL 목록: 폼으로 등록하면 여기에 항목이 추가됩니다 -->
         <div class="til-list" id="til-list">
-          <!-- 아래는 예시 항목입니다. 자유롭게 수정하거나 삭제하세요 -->
-          <article class="til-item">
-            <time>2026-03-17</time>
-            <h3>HTML 시멘틱 태그</h3>
-            <p>header, nav, main, section, article, footer 등 시멘틱 태그의 역할과 사용법을 배웠다.</p>
-          </article>
+            <!-- 아래는 예시 항목입니다. 자유롭게 수정하거나 삭제하세요 -->
+            <article class="til-item">
+                <time>2026-03-17</time>
+                <h3>HTML 시멘틱 태그</h3>
+                <p>header, nav, main, section, article, footer 등 시멘틱 태그의 역할과 사용법을 배웠다.</p>
+            </article>
         </div>
-      </section>
-    </main>
+    </section>
+</main>
 
-    <footer>
-      <p>&copy; My Page</p>
-    </footer>
-  </body>
+<footer>
+    <p>&copy; My Page</p>
+</footer>
+</body>
 </html>
