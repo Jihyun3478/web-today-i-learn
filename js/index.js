@@ -1,25 +1,3 @@
-const tilForm = document.querySelector("#til-form");
-const tilList = document.querySelector("#til-list");
-
-tilForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const date = document.querySelector('#til-date').value;
-    const title = document.querySelector('#til-title').value;
-    const content = document.querySelector('#til-content').value;
-
-    const newItem = document.createElement('article');
-    newItem.className = 'til-item';
-    newItem.innerHTML = `
-        <time>${date}</time>
-        <h3>${title}</h3>
-        <p>${content}</p>
-    `;
-
-    tilList.prepend(newItem);
-    tilForm.reset();
-});
-
 const tracks = [
     {
         title: 'Thats Us',
@@ -64,6 +42,7 @@ const tracks = [
         url: 'https://youtu.be/SuFScoO4tb0'
     },
 ];
+
 let cur = 0, isPlaying = true;
 
 function renderPlaylist() {
@@ -112,3 +91,81 @@ function next() {
 }
 
 renderPlaylist();
+
+// TIL 폼
+const tilForm = document.querySelector("#til-form");
+const tilList = document.querySelector("#til-list");
+
+tilForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const date = document.querySelector('#til-date').value;
+    const title = document.querySelector('#til-title').value;
+    const content = document.querySelector('#til-content').value;
+
+    const newItem = document.createElement('article');
+    newItem.className = 'til-item';
+    newItem.innerHTML = `
+        <time>${date}</time>
+        <h3>${title}</h3>
+        <p>${content}</p>
+    `;
+
+    tilList.prepend(newItem);
+    tilForm.reset();
+});
+
+// 라이트박스
+const lightbox = document.createElement('div');
+lightbox.id = 'lightbox';
+lightbox.style.cssText = `
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+`;
+
+lightbox.innerHTML = `
+  <button id="lightbox-close" style="
+    position: absolute;
+    top: 20px; right: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+  ">&times;</button>
+  <img id="lightbox-img" style="
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  " />
+`;
+
+document.body.appendChild(lightbox);
+
+document.querySelectorAll('.gallery-grid img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+        document.getElementById('lightbox-img').src = img.src;
+        lightbox.style.display = 'flex';
+    });
+});
+
+document.getElementById('lightbox-close').addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) lightbox.style.display = 'none';
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') lightbox.style.display = 'none';
+});
