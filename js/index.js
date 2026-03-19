@@ -35,11 +35,11 @@ const tracks = [
         url: 'https://youtu.be/gxEPV4kolz0'
     },
     {
-        title: 'Honesty',
-        artist: 'Billy Joel',
+        title: 'Falling Slowly',
+        artist: 'Glen Hansard, Marketa Irglova',
         img: 'images/playlist/playlist-6.jpeg',
-        dur: '3:46',
-        url: 'https://youtu.be/SuFScoO4tb0'
+        dur: '4:02',
+        url: 'https://youtu.be/k8mtXwtapX4'
     },
 ];
 
